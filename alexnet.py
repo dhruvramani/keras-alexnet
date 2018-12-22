@@ -24,12 +24,12 @@ def alexnet(n_classes=5):
 
     model.add(Flatten())
     model.add(Dropout(0.5))
-    model.add(Dense(6 * 6 * 256, 4096))
+    model.add(Dense(4096, input_shape=(6 * 6 * 256, )))
     model.add(Activation('relu'))
     model.add(Dropout(0.5))
-    model.add(Dense(4096, 4096))
+    model.add(Dense(4096))
     model.add(Activation('relu'))
-    model.add(Dense(4096, n_classes))
+    model.add(Dense(n_classes))
     model.add(Activation('softmax'))
 
     return model
