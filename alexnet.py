@@ -1,5 +1,5 @@
 from keras import Sequential
-from keras.layers import Conv2D, MaxPooling2D, BatchNormalization, ZeroPadding2D, Dropout, Activation, Flatten
+from keras.layers import Conv2D, MaxPooling2D, BatchNormalization, ZeroPadding2D, Dropout, Activation, Flatten, Dense
 
 def alexnet(n_classes=5):
     model = Sequential()
